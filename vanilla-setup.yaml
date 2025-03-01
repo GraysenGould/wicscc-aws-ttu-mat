@@ -22,7 +22,7 @@ Scheduling:
     - Name: compute
       ComputeResources:
         - Name: hpc6a
-          MaxCount: 3
+          MaxCount: 4
           Efa:
             Enabled: true
             GdrSupport: true
