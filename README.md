@@ -5,7 +5,7 @@ sudo su ec2-user <br>
 cd ~ <br>
 git clone https://github.com/GraysenGould/wicscc-aws-ttu-mat.git <br>
 
-cd ~/wicscc-aws-ttu-mat.git <br>
+cd ~/wicscc-aws-ttu-mat <br>
 source setup-all.sh <br>
 
 cd /fsx/conus_12km <br>
