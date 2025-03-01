@@ -3,7 +3,7 @@ commands to set up cluster: (this should literally do everything) M\ <br>
 sudo su ec2-user <br>
 
 cd ~ <br>
-git clone https://github.com/GraysenGould/cluster-competition-AWS-challenge-2025.git <br>
+git clone https://github.com/GraysenGould/wicscc-aws-ttu-mat.git <br>
 
 cd ~/cluster-competition-AWS-challenge-2025 <br>
 source setup-all.sh <br>
