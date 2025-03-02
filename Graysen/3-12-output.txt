@@ -1,0 +1,108 @@
++ ulimit -s unlimited
++ ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 30446
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 8192
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) unlimited
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++ export OMP_NUM_THREADS=8
++ OMP_NUM_THREADS=8
++ export FI_PROVIDER=efa
++ FI_PROVIDER=efa
++ export I_MPI_FABRICS=shm:ofi
++ I_MPI_FABRICS=shm:ofi
++ export I_MPI_OFI_PROVIDER=efa
++ I_MPI_OFI_PROVIDER=efa
++ export I_MPI_PIN_DOMAIN=omp
++ I_MPI_PIN_DOMAIN=omp
++ export KMP_AFFINITY=compact
++ KMP_AFFINITY=compact
++ export I_MPI_DEBUG=4
++ I_MPI_DEBUG=4
++ mpiexec.hydra -np 24 --ppn 12 /fsx/spack/opt/spack/linux-amzn2-zen2/intel-2021.5.0/wrf-4.3.3-lcghb53hlbeys5ydtbumax6a6mexlapr/run/wrf.exe
+[0] MPI startup(): Intel(R) MPI Library, Version 2021.12  Build 20240410 (id: 49f2f80)
+[0] MPI startup(): Copyright (C) 2003-2024 Intel Corporation.  All rights reserved.
+[0] MPI startup(): library kind: release
+[0] MPI startup(): libfabric version: 1.20.0
+[0] MPI startup(): libfabric provider: efa
+[0] MPI startup(): Load tuning file: "/fsx/spack/opt/spack/linux-amzn2-zen2/intel-2021.5.0/intel-oneapi-mpi-2021.12.1-26xgaplod3dggqi6oovrnwpkmzengqtf/mpi/2021.12/opt/mpi/etc/tuning_generic_shm-ofi.dat"
+ starting wrf task           15  of           24
+ starting wrf task           19  of           24
+ starting wrf task           13  of           24
+ starting wrf task           23  of           24
+ starting wrf task           21  of           24
+ starting wrf task           17  of           24
+ starting wrf task            1  of           24
+ starting wrf task            5  of           24
+ starting wrf task           11  of           24
+ starting wrf task            7  of           24
+ starting wrf task            9  of           24
+ starting wrf task            3  of           24
+ starting wrf task           12  of           24
+ starting wrf task           14  of           24
+ starting wrf task           22  of           24
+ starting wrf task            2  of           24
+ starting wrf task           10  of           24
+[0] MPI startup(): Number of NICs:  1 
+[0] MPI startup(): ===== NIC pinning on compute-dy-hpc6a-1 =====
+[0] MPI startup(): Rank    Pin nic        Nic Id
+[0] MPI startup(): 0       rdmap0s31-rdm  0
+[0] MPI startup(): 1       rdmap0s31-rdm  0
+[0] MPI startup(): 2       rdmap0s31-rdm  0
+[0] MPI startup(): 3       rdmap0s31-rdm  0
+[0] MPI startup(): 4       rdmap0s31-rdm  0
+[0] MPI startup(): 5       rdmap0s31-rdm  0
+[0] MPI startup(): 6       rdmap0s31-rdm  0
+[0] MPI startup(): 7       rdmap0s31-rdm  0
+[0] MPI startup(): 8       rdmap0s31-rdm  0
+[0] MPI startup(): 9       rdmap0s31-rdm  0
+[0] MPI startup(): 10      rdmap0s31-rdm  0
+[0] MPI startup(): 11      rdmap0s31-rdm  0
+ starting wrf task            6  of           24
+ starting wrf task            4  of           24
+ starting wrf task           20  of           24
+ starting wrf task           18  of           24
+ starting wrf task           16  of           24
+ starting wrf task            8  of           24
+[0] MPI startup(): ===== CPU pinning =====
+[0] MPI startup(): Rank    Pid      Node name           Pin cpu
+[0] MPI startup(): 0       19143    compute-dy-hpc6a-1  {0}
+[0] MPI startup(): 1       19144    compute-dy-hpc6a-1  {8}
+[0] MPI startup(): 2       19145    compute-dy-hpc6a-1  {16}
+[0] MPI startup(): 3       19146    compute-dy-hpc6a-1  {24}
+[0] MPI startup(): 4       19147    compute-dy-hpc6a-1  {32}
+[0] MPI startup(): 5       19148    compute-dy-hpc6a-1  {40}
+[0] MPI startup(): 6       19149    compute-dy-hpc6a-1  {48}
+[0] MPI startup(): 7       19150    compute-dy-hpc6a-1  {56}
+[0] MPI startup(): 8       19151    compute-dy-hpc6a-1  {64}
+[0] MPI startup(): 9       19152    compute-dy-hpc6a-1  {72}
+[0] MPI startup(): 10      19153    compute-dy-hpc6a-1  {80}
+[0] MPI startup(): 11      19154    compute-dy-hpc6a-1  {88}
+[0] MPI startup(): 12      17937    compute-dy-hpc6a-2  {0}
+[0] MPI startup(): 13      17938    compute-dy-hpc6a-2  {8}
+[0] MPI startup(): 14      17939    compute-dy-hpc6a-2  {16}
+[0] MPI startup(): 15      17940    compute-dy-hpc6a-2  {24}
+[0] MPI startup(): 16      17941    compute-dy-hpc6a-2  {32}
+[0] MPI startup(): 17      17942    compute-dy-hpc6a-2  {40}
+[0] MPI startup(): 18      17943    compute-dy-hpc6a-2  {48}
+[0] MPI startup(): 19      17944    compute-dy-hpc6a-2  {56}
+[0] MPI startup(): 20      17945    compute-dy-hpc6a-2  {64}
+[0] MPI startup(): 21      17946    compute-dy-hpc6a-2  {72}
+[0] MPI startup(): 22      17947    compute-dy-hpc6a-2  {80}
+[0] MPI startup(): 23      17948    compute-dy-hpc6a-2  {88}
+ starting wrf task            0  of           24
+
+real	3m12.539s
+user	0m0.024s
+sys	0m0.034s
